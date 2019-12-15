@@ -69,8 +69,7 @@ class Main extends Component {
           <button type="submit" className="btn btn-primary">Upload</button>
       </form>
 
-
-        <h2>Buy artwork</h2>
+    <h2>Buy artwork</h2>
           { this.props.artworks.map((artwork, key) => {
               return(
                 <div className="gallery-grid" key={key}>
@@ -78,12 +77,10 @@ class Main extends Component {
                     <div>Price: {window.web3.utils.fromWei(artwork.price.toString(), 'Ether')} Eth</div>
                     <div>Owner: {artwork.owner}</div>
                     <div>Artist: {artwork.artist}</div>
-                    {/*eslint-disable-next-line*/}
-                    <canvas id='img' style = "wdith: 200px; height:200px;">{ !artwork.ipfsHash
+                    { !artwork.ipfsHash
                       ? <h2>It is empty</h2>
                       : <h2><img src= {'https://ipfs.infura.io/ipfs/' + artwork.ipfsHash} alt="artwork" width="100px" height="100px"></img></h2>
                     }
-                    </canvas>
 
                     <div>
                     { !artwork.purchased

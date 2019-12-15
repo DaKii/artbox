@@ -3,7 +3,7 @@ import ArtBox from '../abis/ArtBox.json'
 import Navbar from './Navbar.js';
 import Web3 from 'web3';
 import './App.css';
-import Main from './Main'
+import Main from './Main.js'
 
 
 class App extends Component {
@@ -50,13 +50,14 @@ class App extends Component {
       this.setState({artbox})
       console.log(artbox)
       const artworkCount = await artbox.methods.artworkCount().call()
-      this.setState({artworkCount})
       console.log('Artwork Count' , artworkCount)
       for (var i = 1; i <= artworkCount; i++){
          const artwork = await artbox.methods.artworks(i).call()
          this.setState({
            artworks: [...this.state.artworks, artwork]
+
          })
+         console.log(this.state.artworks)
        }
       this.setState({ loading: false})
       console.log('BlockchainData loaded')
@@ -70,7 +71,6 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      buffer : null,
       account: '',
       artworkCount: 0,
       artworks: [],
@@ -104,16 +104,11 @@ class App extends Component {
     return (
       <div>
         <Navbar account={this.state.account} />
-        <main role="main" className="col-lg-12 d-flex">
-          { this.state.loading
-            ? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div>
-            : <Main
-              artworks={this.state.artworks}
-              uploadArtwork={this.uploadArtwork}
-              buyArtwork={this.buyArtwork}
-              />
-          }
-        </main>
+        <Main 
+          artworks = {this.state.artworks}
+          uploadArtwork={this.uploadArtwork} 
+          buyArtwork={this.buyArtwork}
+          hello = "hello"/>
       </div>
     );
   }
