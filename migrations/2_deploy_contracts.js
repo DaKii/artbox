@@ -1,4 +1,4 @@
-const Artbox = artifacts.require("Artbox");
+const Artbox = artifacts.require("ArtBox");
 
 module.exports = function(deployer) {
   deployer.deploy(Artbox);
