@@ -9907,6 +9907,105 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0x55d9adfee98da796c20b4291ddcadf0075b7c3986d5653cfb59091a3d0055f17": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "artist",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "originalHash",
+              "type": "string"
+            }
+          ],
+          "name": "buyArtworkEvent",
+          "type": "event"
+        },
+        "0x2acb094bc093c8fed7e76a4465e0f42bbafc50080403fde6c1d4357088905227": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "artist",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "originalHash",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "waterMarkedHash",
+              "type": "string"
+            }
+          ],
+          "name": "sellArtworkEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x95c6FB4607b33D707Af430874F53F5a07c15DBE1",
+      "transactionHash": "0x7abf76141f9f36ab2d5d9dbc55f8fe77c841cb5f6373171acf15d6360d77b721"
+    },
     "5777": {
       "events": {
         "0x344d959a1f644649bd01536afb694568ee092b4997f19a8d29fb461c9a96300a": {
@@ -10339,12 +10438,13 @@
         }
       },
       "links": {},
-      "address": "0x760D1Bad933d8F225B58cD9383071b5cb37Bb02B",
-      "transactionHash": "0x19ba04f45477922e3990ae55d4db378a2a8ccf9f1cfcde5c3bb996588b9ecec2"
+      "address": "0x5183F293fA40D0420E54e4d3125634E45B481E48",
+      "transactionHash": "0x42dfc50841117d8af17e86288b08fa641974282489f81cae4aa687aa17c6f9dd"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-03-08T17:39:47.689Z",
+  "updatedAt": "2020-03-26T13:47:35.859Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

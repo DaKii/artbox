@@ -6,9 +6,9 @@ import './App.css';
 
 import {
   Route,
-  NavLink,
   HashRouter
 } from "react-router-dom";
+
 
 
 //Links
@@ -17,7 +17,7 @@ import Gallery from './Gallery';
 import Header from '././Header';
 import Navbar from'./Navbar';
 import Home from './Home';
-import Image from './Image';
+import Footer from './Footer'
 
 class App extends Component {
   async componentWillMount() {
@@ -50,6 +50,10 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
+
+    this.setState({
+      loading: true
+    });
     const web3 = window.web3
     // Getting user account
     const accounts = await web3.eth.getAccounts()
@@ -70,6 +74,9 @@ class App extends Component {
       console.log('User created: ', createdCount)
       console.log('User owned', ownerCount)
       console.log('Artwork Count' , artworkCount)
+      this.setState({ 
+        artworkCount: artworkCount
+      })
       for (var i = 1; i <= artworkCount; i++){
         const artwork = await artbox.methods.artworks(i).call()
         const ownedArtwork = await artbox.methods.ownersCollection(this.state.account, i).call()
@@ -91,9 +98,9 @@ class App extends Component {
         })
       }
 
-      console.log(this.state.userOwned)
-      console.log(this.state.userCreated)
-      this.setState({ loading: false})
+      this.setState({
+        loading: false
+      })
       console.log('BlockchainData loaded')
     } else {
       window.alert('ArtBox contract not deployed to detected network.')
@@ -105,6 +112,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
+      loading: 'true',
       account: '',
       artworkCount: 0,
       artworks: [],
@@ -138,19 +146,32 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-        <div>
           <Header/>
           <Navbar account={this.state.account}/>
 
-          <Route exact path='/home'> <Home /> </Route>
-          <Route path='/gallery'>
-            <Gallery 
-              account={this.state.account}
-              artworks = {this.state.artworks}
-              uploadArtwork={this.uploadArtwork} 
-              buyArtwork={this.buyArtwork}/>
+          <Route exact path='/'> 
+          {this.state.loading == true 
+            ? <div>loading</div> 
+            : <Home 
+                artworks = {this.state.artworks}
+                artworkCount= {this.state.artworkCount} /> 
+                
+          }
           </Route>
-          <Route exact path='/profile' component={Profile}>
+          {/* Paths/Links */}
+          <Route path='/gallery'>
+          {this.state.loading == true 
+            ? <div>loading</div> 
+            : <Gallery 
+                account={this.state.account}
+                artworks = {this.state.artworks}
+                uploadArtwork={this.uploadArtwork} 
+                buyArtwork={this.buyArtwork}
+                artworkCount = {this.state.artworkCount}
+              />     
+          }
+          </Route>
+          <Route path='/profile' component={Profile}>
             <Profile
               account={this.state.account}
               artworks = {this.state.artworks}
@@ -158,7 +179,8 @@ class App extends Component {
               userCreated={this.state.userCreated}
             /> </Route>
 
-        </div>
+
+          <Footer />
       </HashRouter>
     );
   }

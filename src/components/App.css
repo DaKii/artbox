@@ -1,1 +1,531 @@
-/* Styles go here */
+/*Importing google fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+
+#root {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+html, body {
+    margin: 0em;
+    font-family: 'Montserrat', sans-serif;
+    color: #4F3A3A;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+/* Navbar */
+.nav-link {
+    color: #4F3A3A;
+    font-weight: 599;
+}
+
+
+/* Home */
+.container-fluid {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0em;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+}
+
+.v-divider{
+    height:100%;
+    border-left:1px solid #4F3A3A;
+   }
+
+.container-fluid.divider {
+    width: 100%;
+    margin: 0em ;
+    padding: 0em;
+}
+
+.row.justify-content-center {
+    width: 100%;
+    padding: 0em;
+}
+
+.row.justify-content-center .col-6 {
+    width: 100%;
+    padding: 0em;
+    margin: 0em;
+    height: 500px;
+}
+
+
+.container-fluid.timeline {
+    
+    width: 50%;
+    height: 100%;
+}
+
+.container-fluid.timeline .row {
+    height: 100%;
+}
+
+.col-12 {
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+#home-button {
+    margin: 0em;
+    border-radius: 3em;
+}
+
+.button {
+    margin: 1em;
+}
+
+.h2 {
+    font-family: 'Josefin Sans', cursive;
+}
+
+.start-timeline {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.end-block {
+    padding: 1em;
+}
+
+
+
+.rounded-circle{
+    margin: 0em auto;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #4F3A3A;;
+}
+
+.start-timeline .rounded-circle {
+    margin-top: .5em;
+}
+
+.content .image-block {
+    height: 100%;
+    padding: 1em;
+}
+
+.content .image a {
+    width: 500px;
+    height: 600px;
+}
+
+#home-image {
+    max-width: 500px;
+    max-height: 600px;
+}
+
+
+
+.content .image-block .title {
+    padding: 3em;
+    padding-bottom: 1em;
+}
+
+.content .image-block .artist {
+    padding-bottom: 2em;
+}
+
+
+
+/* Gallery */
+.row {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.upload-div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.upload {
+    margin: 0 auto;
+    border: 0px;
+    background-color: #4F3A3A;
+}
+
+.row.test_gallery{
+    height: 572px;
+}
+
+/* all small columns */
+.test_gallery .col-sm a {
+    height: 100%;
+}
+
+.test_gallery .col-sm a img {
+    object-fit: none; /* Do not scale the image */ 
+    height: 100%;
+    width: 100%;
+}
+
+/* all small columns -6 */
+.test_gallery .col-sm-6 a {
+    height: 100%;
+}
+
+.test_gallery .col-sm-6 a img {
+    object-fit: none; /* Do not scale the image */
+    height: 100%;
+    width: 100%;
+}
+
+
+/* column 1 */
+.test_gallery .col-sm {
+    padding: 0em;
+    height: 100%;
+    width: 80%;
+    text-align: center;
+}
+
+.test_gallery .col-sm.col {
+    height: 100%;
+}
+
+
+
+
+.test_gallery .col-sm.col .row {
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* column 2 */
+
+.test_gallery .col-sm.col2 .row.top {
+    margin: 0 auto;
+    margin-bottom: 3em;
+    height: 61.5%;
+}
+
+.test_gallery .col-sm.col2 .row.bottom {
+    height: 30%;
+}
+
+
+/* column 3 */
+.test_gallery .col-sm.col3 .row.top {
+    margin: 0 auto;
+    margin-bottom: 3em;
+    height: 30%;
+}
+
+.test_gallery .col-sm.col3 .row.bottom {
+    height: 61.5%;
+}
+
+.test_gallery .col-sm-6.col4 {
+    height: 100%;
+}
+
+.test_gallery .col-sm-6.col4 .row.top {
+    height: 57%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    width: 100%;
+}
+
+.test_gallery .col-sm-6.col4 .row.top img {
+    width: 100%;
+    height: 100%;
+}
+
+.test_gallery .col-sm-6.col4 .row.bottom {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-right: 0;
+    height: 34.5%;
+}
+
+.test_gallery .col-sm-6.col4 .row.bottom .col-md-6 {
+    height: 100%;
+    padding-right: 3em;
+    padding-left: 0em;
+}
+
+.test_gallery .col-sm-6.col4 .row.bottom .col-md-6.col2 {
+    padding-right: 0em;
+}
+
+
+
+.test_gallery .col-sm-6.col4 .row.bottom img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    padding-bottom: 3em;
+}
+
+.carousel-item {
+    padding: 1em;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+
+/* Modal Image */
+.modal-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal-body .row {
+    margin-right: 2em;
+}
+
+.modal-body .row .col-8 {
+    height: 100%;
+    margin: 0em;
+    text-align: center;
+}
+
+.model-body .row .col-8 {
+    padding-top: 1em;
+    margin: 0 auto;
+}
+
+.modal-body .row .col-8 img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+}
+
+.modal-body .row .col {
+    width: 30%;
+    height: 100%;
+}
+
+.modal-body .row .col .profile-image {
+    margin: 0 auto;
+    width:50%;
+    height: 10%;
+    color:#fff;
+    text-align:center;
+    line-height:0;
+    padding:25% 0;
+    border-radius:50%;background:#6D4242
+}
+    
+.modal-body .row .col .profile-image:hover{
+    color:#ccc;
+    text-decoration:none;
+    background:#333
+}
+
+
+.modal-body .row .col p {
+    font-size: 12px;
+    padding-top: 1em;
+    text-align: center;
+    margin: 0em;
+}
+
+.modal-body .bio {
+    text-align: center;
+
+}
+
+.modal-body .buy-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-body .buy-price .buy {
+    width: 65%;
+    padding: .25em;
+}
+
+.modal-body .buy-price .buy .buy-button {
+    width: 100%;
+    height: 23px;
+    font-size: 11px;
+    border-radius: 1em;
+    background-color: #CF9797;
+    border-color: pink;
+}
+
+.modal-body .buy-price .bid {
+    width: 65%;
+    padding: .25em;
+}
+
+.modal-body .buy-price .bid .bid-button {
+    width: 100%;
+    height: 23px;
+    font-size: 11px;
+    border-radius: 1em;
+    background-color: #4F3A3A;
+    border-color: pink;
+}
+
+
+.modal-body .other-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+.modal-body .other-image a {
+    height: 50%;
+    width: 100%;
+    margin: 1em;
+}
+
+.modal-body .other-image a img {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 6.5%;
+}
+/* Navbar */
+.navbar {
+    padding-bottom: 0em;;
+}
+
+
+
+
+/* Header */
+.jumbotron {
+    padding: .5em;
+    margin: 0em;
+    background-color: #CF9797;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Profile */
+.owned {
+    width: 100%;
+}
+
+.owned .row {
+    width: 70%;
+}
+
+.owned .row .col-sm-4 {
+    width: 30%;
+}
+
+.owned .row .col-sm-4 .box {
+    width: 100%;
+}
+
+.owned .row .col-sm-4 .box .image {
+    width: 100%;
+}
+
+.owned .row .col-sm-4 .box .image img {
+    object-fit: none; /* Do not scale the image */
+    width: 100%;
+    height: 366px;
+}
+
+.profile-nav {
+    color: rgb(255, 255, 255);
+    padding: 1em;
+}
+
+.profile-nav button {
+    background-color: #DBA0A0;
+    border-color: #DBA0A0;
+}
+
+
+.header-profile {
+    margin-top: 1em;
+    width: 100%;
+}
+
+.container-fluid {
+    height: 100%;
+    padding: 1em;
+}
+
+.profile-pic {
+    margin: 0 auto;
+    width: 176px;
+    height: 176px;
+    margin-bottom: 2em;
+    background-color: rgb(77, 48, 48);
+    border: none;
+}
+
+
+.profile-choice {
+    background-color: #CF9797;
+}
+
+.profile-choice:hover{
+    border-color:#CF9797;
+}
+
+
+/* Upload */
+
+#noPreviewRow {
+    margin: 0em auto;
+    padding-bottom: 1em;
+}
+
+#noPreview {
+    width: 100%;
+}
+
+#noPreview img {
+    width: 100%;
+}
+
+#waterMarkedPreview {
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+#upload-form {
+    padding: 2em;
+}
+
+
+.img-thumbnail {
+    width: 500px;
+    height: 500px;
+}
+
+.img-thumbnail.watermark {
+    width: 100px;
+    height: 100px;
+}
+

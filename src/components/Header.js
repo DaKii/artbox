@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './header.css';
 
-class Navbar extends Component {
+
+class Header extends Component {
     render() {
         return (
-          <div class="jumbotron jumbotron-fluid">
+          <div className="jumbotron text-white jumbotron-fluid">
             <div class="container">
-              <h1 class="display-4">artbox.</h1>
+              <h1 class="display-5">artbox.</h1>
             </div>
           </div>
 
@@ -14,4 +14,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default Header;
